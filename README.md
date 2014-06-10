@@ -1,7 +1,7 @@
 App Introduction
 ===================
 
-App Introduction is a library that helps to create introduction menu for users. 
+App Introduction is a library that helps to create introduction menu for users. Created by Eulici.
 
 Only thing that you need to do is giving the id of the element to show (if you want to point an element) and
 write the message. You can choose pointing type like vertical or horizontal. Then the rest is done by library.
@@ -10,6 +10,12 @@ The messages that you add to same AppIntroduction object are stored and showed t
 When user sees messages of an Activity once, they will not be shown again. You can select one of the 20 themes.
 You can create listeners for doing some actions before and after each step, so you can have full control on steps.
 Also you can create a listener to know when user dismisses the AppIntroduction.
+
+Features added respectly Eulici library
+-----------------
+* Views now are being added to the real root view. Useful when using SlidingMenu or similar modules.
+* Reset to show again even when rememberPast is set to false
+* Sample Activity added
 
 Features included
 -----------------
@@ -64,6 +70,9 @@ AppIntroduction appIntroduction = new AppIntroduction(this);
 
 // remembering past. not showing again if already shown before
 appIntroduction.rememberPast(true);
+
+// reset memory and show all posts again when start
+appIntroduction.reset();
 
 // changing theme. selecting one of the colors
 appIntroduction.setTheme(AppIntroduction.TURQUOISE);
